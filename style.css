@@ -3,11 +3,9 @@
     margin: 0;
 }
 
-div{
-}
-
 .header{
     border-bottom:  1px solid gray;
+    font-size: 1.5em;
     padding : 20px;
     text-align: center;
     align-items: center;
@@ -15,12 +13,12 @@ div{
     color: white;
 }
 
-#gridbox{
+.gridbox{
     display: grid;
     grid-template-columns: 170px 1fr;
 }
 
-#gridbox .nav {
+.gridbox .nav {
     border-right: 1px solid gray;
     padding: 10px;
     height:100vh;
@@ -30,4 +28,21 @@ div{
 .contents{
     padding: 10px;
     padding-left: 20px;
+}
+
+@media(max-width:800px){
+    .gridbox{
+        display: block;
+    }
+    .gridbox .nav{
+        height: auto;
+        border-bottom: 1px solid gray;
+    }
+    .gridbox .nav ul li{
+        border-right: none;
+        padding: 10px;
+        height: auto;
+        line-height: 1.5em;
+        display: inline-block;
+    }
 }
